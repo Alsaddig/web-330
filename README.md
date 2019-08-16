@@ -5,3 +5,6 @@ This course examines intermediate and advanced JavaScript concepts and technique
 Professor Mohamed - Bellevue University Alsaddig - Bellevue
 
 Week1
+
+
+Week2
