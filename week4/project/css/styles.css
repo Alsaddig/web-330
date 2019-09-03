@@ -1,0 +1,125 @@
+@font-face{
+		font-family:'rockwell-slab';
+		src:url(../fonts/rockwell-slab.woff),
+		url(../fonts/rockwell-slab.ttf);
+		
+	}
+body{
+font-family:'rockwell-slab',Arial,Helvetic,sans-serif;
+}
+#container{
+width:960px;
+margin:0 auto;
+
+}
+header{
+width:940px;
+
+padding:10px;
+
+}
+nav
+{
+width:940px;
+background-color:blue;
+padding:10px;
+color:white;
+}
+ }
+nav ul{
+	color:white;
+	padding:10px;
+	
+	
+	}
+	nav li{
+	list-style: none;
+	display:inline;
+	
+    padding:10px;
+	
+
+	}
+	nav a{
+		color:white;
+		
+	}
+	nav a:link{
+		
+	display:inline-block;
+	text-decoration:none;
+		
+	}
+
+
+
+section
+{
+background-color:lightblue;
+
+}
+article
+{
+
+width:640px;
+padding:10px;
+float:right;
+}
+#option ul{
+	list-style-image:url(../images/arrow-bullet.jpg);
+	
+}
+aside
+{
+
+width:280px;
+padding:10px;
+float:left;
+}
+footer
+{
+background-color:blue;
+padding:10px;
+clear:both;
+color:white;
+}
+h1{
+color:red;
+}
+	@media(max-width: 480px) {
+		body {
+			background-color: lightblue;
+		}
+		#container{
+		width:auto;
+
+	    }
+		header{
+		width:auto;
+
+	    }
+		nav{
+		width:auto;
+
+	    }
+		section{
+		width:auto;
+
+	    }
+		article{
+		width:auto;
+		float:none;
+
+	    }
+		aside{
+		width:auto;
+		float:none;
+		
+
+	    }
+		footer{
+		width:auto;
+
+	    }
+		
+	}
