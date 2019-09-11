@@ -1,0 +1,57 @@
+<!-- Exercise 6.2 – ViewModel Function Objects
+Tuesday, November 21, 2017 10:16 AM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-tofit=no">
+ <title>ViewModel Example</title>
+ <!-- Stylesheet - Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+beta.2/css/bootstrap.min.css"
+ integrity="sha384-
+PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+crossorigin="anonymous">
+ <!-- JavaScript Libraries -->
+ <script src="../knockout-3.4.2.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <ul class="navbar-nav">
+ <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Contact Us</a>
+    </li>
+    </ul>
+   </nav>
+   <div role="main" class="container">
+    <br /><br />
+    <h2>Person ViewModel</h2>
+    <div class="form-group">
+    <label for="txtFirstName">First Name:</label>
+    <input type="text" class="form-control alert-warning" data-bind="value: firstName" id="txtFirstName"/>
+    </div>
+    <div class="form-group">
+    <label for="txtLastName">Last Name:</label>
+    <input type="text" class="form-control alert-warning" data-bind="value: lastName" id="txtLastName"/>
+    </div>
+    <div class="form-group">
+            <label for="txtEmail">Email:</label>
+            <input type="text" class="form-control alert-warning" data-bind="value: email" id="txtEmail"/>
+    </div>
+   </div>
+   <script>
+    function PersonViewModel() {
+    this.firstName = ko.observable("Abraham");
+    this.lastName = ko.observable("Lincoln");
+    this.email = ko.observable("alincoln@domain.com");
+    }
+    ko.applyBindings(new PersonViewModel());
+   </script>
+   </body>
+   </html>
