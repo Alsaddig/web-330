@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-tofit=no">
+ <title>ViewModel Example</title>
+ <!-- Stylesheet - Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+beta.2/css/bootstrap.min.css"
+ integrity="sha384-
+PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+crossorigin="anonymous">
+ <!-- JavaScript Libraries -->
+ <script src="../knockout-3.4.2.js"></script>
+ <style>
+ .container{
+     width:960px;
+     background-color: aqua;
+
+ }
+ .pr{
+     color:white;
+     float: right;
+     clear: both;
+ }
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+         <div role="main" class="container">
+              <br/><br/>
+            <h2>Alsaddig Company</h2>
+             <table class="table table-dark table-striped table-hover">
+                <thead> 
+                    <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                        <th>Link</th>
+                        
+                    </tr>
+                </thead>
+                    <tbody data-bind="foreach: fruits">
+                     <tr>
+                        <td data-bind="text: Title"></td>
+                        <td data-bind="text: Description"></td>
+                        <td data-bind="text: Link"></td>
+                     </tr>
+                </tbody>
+            </table>
+                    
+            <br/></div>
+    <script>
+            function CompanyViewModel() {
+                this.fruits = ko.observableArray([
+                    {Title: "JavaScript Developer", Description: "A JavaScript developer is responsible for implementing the front-end logic that defines the behavior of the visual elements of a web application. A JavaScript developer is also responsible for connecting this with the services that reside on the back-end." ,
+                     Link:"http://www.google.com"},
+                    {Title: "PHP Developer", Description: "A PHP developer is responsible for writing server-side web application logic. PHP developers usually develop back-end components, connect the application with the other (often third-party) web services, and support the front-end developers by integrating their work with the application." ,
+                     Link:"http://www.google.com"},
+                    {Title: ".Net Developer", Description: ".NET Developer duties and responsibilities Utilize established development tools, guidelines and conventions including but. not limited to ASP.NET, SQL Server, HTML, CSS, JavaScript, and C#/VB.NET. Prepare and maintain code for various .Net applications and resolve any defects in systems." , 
+                    Link:"http://www.google.com"},
+                    {Title: "webScript Developer", Description: "A JavaScript developer is responsible for implementing the front-end logic that defines the behavior of the visual elements of a web application. A JavaScript developer is also responsible for connecting this with the services that reside on the back-end." , 
+                    Link:"http://www.google.com"},
+                    {Title: "Java Developer", Description: "A Java developer is responsible for many duties throughout the development life cycle of applications, from concept and design right through to testing. ... Conduct software analysis, programming, testing and debugging. Identifying production and non-production application issues. Transforming requirements into stipulations." ,
+                     Link:"https://resources.workable.com/java-developer-job-description"}
+                    
+                ]);
+            }
+            ko.applyBindings(new CompanyViewModel());
+</script>
+<footer class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+       <p class="pr">copyright@Alsaddig 2019</p> 
+    </footer>
+</body>
+</html>
